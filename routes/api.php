@@ -16,4 +16,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('/register-user', 'LoginController@CreateUser');
 Route::post('/get-token', 'LoginController@GetToken');
-Route::middleware('auth')->get('/git/users', 'GithubController@getGitUsers');
+Route::middleware('auth:api')->get('/git/users', 'GithubController@getGitUsers');
